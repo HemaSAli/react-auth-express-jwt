@@ -9,10 +9,15 @@ class Welcome extends Component {
   state = { loading: true, username: "", password: "" };
 
   componentDidMount() {
-    axios.get("/api/v1/getUser").then(userData => {
-      const { username, password } = userData.data;
-      this.setState({ loading: false, username, password });
-    });
+    axios
+      .get("/api/v1/getUser")
+      .then(userData => {
+        const { username, password } = userData.data;
+        this.setState({ loading: false, username, password });
+      })
+      .catch(err => {
+        this.props.history.push("/login");
+      });
   }
 
   logout = () => {
