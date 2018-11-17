@@ -14,9 +14,11 @@
  dbPassword = WRITE_DBPASSWORD
  SECRET = WRITE_YOURSECRET
 ```
-- run ``` npm run dev ``` to start
+- run ``` npm run server ``` to start the server and create the database
 - you will see that your database has one table which is ```users```
 - add fake username & password to this table from terminal, you will use it for login
+- run ``` npm run dev ``` to start the application
+
 
 
 #### Tech stack
